@@ -1,0 +1,2748 @@
+1. C Hello World Program
+
+#include <stdio.h>
+int main() {
+    printf("Hello, World!\n");
+    return 0;
+}
+2. C Program to Print Your Own Name
+
+#include <stdio.h>
+int main() {
+    printf("My name is Copilot.\n");
+    return 0;
+}
+3. C Program to Print an Integer Entered By the User
+
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    printf("You entered: %d\n", num);
+    return 0;
+}
+4. C Program to Add Two Numbers
+
+#include <stdio.h>
+int main() {
+    int a, b, sum;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    sum = a + b;
+    printf("Sum = %d\n", sum);
+    return 0;
+}
+5. C Program to Check Whether a Number is Prime or Not
+
+#include <stdio.h>
+int main() {
+    int n, i, flag = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    if (n <= 1) flag = 1;
+    for (i = 2; i <= n/2; i++) {
+        if (n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+    if (flag == 0) printf("%d is prime.\n", n);
+    else printf("%d is not prime.\n", n);
+    return 0;
+}
+6. C Program to Multiply Two Floating-Point Numbers
+
+#include <stdio.h>
+int main() {
+    float a, b, product;
+    printf("Enter two floating numbers: ");
+    scanf("%f %f", &a, &b);
+    product = a * b;
+    printf("Product = %.2f\n", product);
+    return 0;
+}
+7. C Program to Print the ASCII Value of a Character
+
+#include <stdio.h>
+int main() {
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);
+    printf("ASCII value of %c = %d\n", c, c);
+    return 0;
+}
+8. C Program to Swap Two Numbers
+
+#include <stdio.h>
+int main() {
+    int a, b, temp;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    temp = a;
+    a = b;
+    b = temp;
+    printf("After swapping: a = %d, b = %d\n", a, b);
+    return 0;
+}
+9. C Program to Calculate Fahrenheit to Celsius
+
+#include <stdio.h>
+int main() {
+    float f, c;
+    printf("Enter temperature in Fahrenheit: ");
+    scanf("%f", &f);
+    c = (f - 32) * 5 / 9;
+    printf("Celsius = %.2f\n", c);
+    return 0;
+}
+10. C Program to Find the Size of int, float, double, and char
+
+#include <stdio.h>
+int main() {
+    printf("Size of int: %lu bytes\n", sizeof(int));
+    printf("Size of float: %lu bytes\n", sizeof(float));
+    printf("Size of double: %lu bytes\n", sizeof(double));
+    printf("Size of char: %lu bytes\n", sizeof(char));
+    return 0;
+}
+11. C Program to Add Two Complex Numbers
+
+#include <stdio.h>
+struct Complex {
+    float real;
+    float imag;
+};
+int main() {
+    struct Complex a, b, sum;
+    printf("Enter first complex number (real imag): ");
+    scanf("%f %f", &a.real, &a.imag);
+    printf("Enter second complex number (real imag): ");
+    scanf("%f %f", &b.real, &b.imag);
+    sum.real = a.real + b.real;
+    sum.imag = a.imag + b.imag;
+    printf("Sum = %.2f + %.2fi\n", sum.real, sum.imag);
+    return 0;
+}
+12. C Program to Print Prime Numbers from 1 to N
+
+#include <stdio.h>
+int main() {
+    int n, i, j, flag;
+    printf("Enter N: ");
+    scanf("%d", &n);
+    printf("Prime numbers from 1 to %d are:\n", n);
+    for (i = 2; i <= n; i++) {
+        flag = 0;
+        for (j = 2; j <= i/2; j++) {
+            if (i % j == 0) {
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0) printf("%d ", i);
+    }
+    return 0;
+}
+13. C Program to Find Simple Interest
+
+#include <stdio.h>
+int main() {
+    float p, r, t, si;
+    printf("Enter principal, rate, and time: ");
+    scanf("%f %f %f", &p, &r, &t);
+    si = (p * r * t) / 100;
+    printf("Simple Interest = %.2f\n", si);
+    return 0;
+}
+14. C Program to Find Compound Interest
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+    double p, r, t, ci;
+    printf("Enter principal, rate, and time: ");
+    scanf("%lf %lf %lf", &p, &r, &t);
+    ci = p * pow((1 + r/100), t) - p;
+    printf("Compound Interest = %.2lf\n", ci);
+    return 0;
+}
+15. C Program for Area and Perimeter of Rectangle
+
+#include <stdio.h>
+int main() {
+    float l, w, area, perimeter;
+    printf("Enter length and width: ");
+    scanf("%f %f", &l, &w);
+    area = l * w;
+    perimeter = 2 * (l + w);
+    printf("Area = %.2f\n", area);
+    printf("Perimeter = %.2f\n", perimeter);
+    return 0;
+}
+
+
+
+
+16. Check Whether a Number is Positive, Negative, or Zero
+
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num > 0) printf("Positive\n");
+    else if (num < 0) printf("Negative\n");
+    else printf("Zero\n");
+    return 0;
+}
+17. Check Whether Number is Even or Odd
+
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (num % 2 == 0) printf("Even\n");
+    else printf("Odd\n");
+    return 0;
+}
+18. Check Whether a Character is Vowel or Consonant
+
+#include <stdio.h>
+int main() {
+    char c;
+    printf("Enter a character: ");
+    scanf("%c", &c);
+    if (c=='a'||c=='e'||c=='i'||c=='o'||c=='u'||
+        c=='A'||c=='E'||c=='I'||c=='O'||c=='U')
+        printf("Vowel\n");
+    else
+        printf("Consonant\n");
+    return 0;
+}
+19. Find Largest Number among Three Numbers
+
+#include <stdio.h>
+int main() {
+    int a, b, c;
+    printf("Enter three numbers: ");
+    scanf("%d %d %d", &a, &b, &c);
+    if (a >= b && a >= c) printf("Largest = %d\n", a);
+    else if (b >= a && b >= c) printf("Largest = %d\n", b);
+    else printf("Largest = %d\n", c);
+    return 0;
+}
+20. Calculate Sum of Natural Numbers
+
+#include <stdio.h>
+int main() {
+    int n, sum = 0;
+    printf("Enter N: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) sum += i;
+    printf("Sum = %d\n", sum);
+    return 0;
+}
+21. Print Alphabets from A to Z Using Loop
+
+#include <stdio.h>
+int main() {
+    for (char c = 'A'; c <= 'Z'; c++) {
+        printf("%c ", c);
+    }
+    return 0;
+}
+22. Check Leap Year
+
+#include <stdio.h>
+int main() {
+    int year;
+    printf("Enter year: ");
+    scanf("%d", &year);
+    if ((year % 400 == 0) || (year % 4 == 0 && year % 100 != 0))
+        printf("%d is a leap year\n", year);
+    else
+        printf("%d is not a leap year\n", year);
+    return 0;
+}
+23. Find Factorial of a Number
+
+#include <stdio.h>
+int main() {
+    int n, fact = 1;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) fact *= i;
+    printf("Factorial = %d\n", fact);
+    return 0;
+}
+24. Make a Simple Calculator
+
+#include <stdio.h>
+int main() {
+    char op;
+    double a, b;
+    printf("Enter operator (+,-,*,/): ");
+    scanf(" %c", &op);
+    printf("Enter two numbers: ");
+    scanf("%lf %lf", &a, &b);
+    switch(op) {
+        case '+': printf("Result = %.2lf\n", a+b); break;
+        case '-': printf("Result = %.2lf\n", a-b); break;
+        case '*': printf("Result = %.2lf\n", a*b); break;
+        case '/': printf("Result = %.2lf\n", a/b); break;
+        default: printf("Invalid operator\n");
+    }
+    return 0;
+}
+25. Generate Multiplication Table
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= 10; i++) {
+        printf("%d x %d = %d\n", n, i, n*i);
+    }
+    return 0;
+}
+26. Print Fibonacci Series
+
+#include <stdio.h>
+int main() {
+    int n, t1 = 0, t2 = 1, next;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+    printf("Fibonacci Series: ");
+    for (int i = 1; i <= n; i++) {
+        printf("%d ", t1);
+        next = t1 + t2;
+        t1 = t2;
+        t2 = next;
+    }
+    return 0;
+}
+27. Find LCM of Two Numbers
+
+#include <stdio.h>
+int main() {
+    int a, b, max;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    max = (a > b) ? a : b;
+    while (1) {
+        if (max % a == 0 && max % b == 0) {
+            printf("LCM = %d\n", max);
+            break;
+        }
+        max++;
+    }
+    return 0;
+}
+28. Check Armstrong Number
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int n, sum = 0, temp, digits;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    digits = (int)log10(n) + 1;
+    while (temp > 0) {
+        int r = temp % 10;
+        sum += pow(r, digits);
+        temp /= 10;
+    }
+    if (sum == n) printf("%d is Armstrong\n", n);
+    else printf("%d is not Armstrong\n", n);
+    return 0;
+}
+29. Display Armstrong Numbers between 1 to 1000
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int n, temp, digits, sum;
+    printf("Armstrong numbers between 1 and 1000:\n");
+    for (n = 1; n <= 1000; n++) {
+        temp = n;
+        digits = (int)log10(n) + 1;
+        sum = 0;
+        while (temp > 0) {
+            int r = temp % 10;
+            sum += pow(r, digits);
+            temp /= 10;
+        }
+        if (sum == n) printf("%d ", n);
+    }
+    return 0;
+}
+30. Display Armstrong Number between Two Intervals
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int low, high, n, temp, digits, sum;
+    printf("Enter two intervals: ");
+    scanf("%d %d", &low, &high);
+    printf("Armstrong numbers between %d and %d:\n", low, high);
+    for (n = low; n <= high; n++) {
+        temp = n;
+        digits = (int)log10(n) + 1;
+        sum = 0;
+        while (temp > 0) {
+            int r = temp % 10;
+            sum += pow(r, digits);
+            temp /= 10;
+        }
+        if (sum == n) printf("%d ", n);
+    }
+    return 0;
+}
+31. Reverse a Number
+
+#include <stdio.h>
+int main() {
+    int n, rev = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    while (n != 0) {
+        rev = rev*10 + n%10;
+        n /= 10;
+    }
+    printf("Reversed number = %d\n", rev);
+    return 0;
+}
+32. Check Whether a Number is a Palindrome or Not
+
+#include <stdio.h>
+int main() {
+    int n, rev = 0, temp;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    temp = n;
+    while (temp != 0) {
+        rev = rev*10 + temp%10;
+        temp /= 10;
+    }
+    if (rev == n) printf("%d is Palindrome\n", n);
+    else printf("%d is not Palindrome\n", n);
+    return 0;
+}
+33. Check Whether a Number is Prime or Not
+
+#include <stdio.h>
+int main() {
+    int n, i, flag = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    if (n <= 1) {
+        printf("%d is not prime.\n", n);
+        return 0;
+    }
+
+    for (i = 2; i <= n/2; i++) {
+        if (n % i == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+    if (flag == 0)
+        printf("%d is prime.\n", n);
+    else
+        printf("%d is not prime.\n", n);
+
+    return 0;
+}
+
+	
+34. Display Prime Numbers between Intervals
+
+#include <stdio.h>
+int main() {
+    int low, high, i, j, flag;
+    printf("Enter two intervals: ");
+    scanf("%d %d", &low, &high);
+    printf("Prime numbers between %d and %d are:\n", low, high);
+    for (i = low; i <= high; i++) {
+        if (i <= 1) continue;
+        flag = 0;
+        for (j = 2; j <= i/2; j++) {
+            if (i % j == 0) {
+                flag = 1;
+                break;
+            }
+        }
+        if (flag == 0) printf("%d ", i);
+    }
+    return 0;
+}
+35. Check Whether the Input Number is a Neon Number
+
+#include <stdio.h>
+int main() {
+    int n, sq, sum = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    sq = n * n;
+    while (sq > 0) {
+        sum += sq % 10;
+        sq /= 10;
+    }
+    if (sum == n) printf("%d is a Neon Number\n", n);
+    else printf("%d is not a Neon Number\n", n);
+    return 0;
+}
+36. Find All Factors of a Natural Number
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter a natural number: ");
+    scanf("%d", &n);
+    printf("Factors of %d are:\n", n);
+    for (int i = 1; i <= n; i++) {
+        if (n % i == 0) printf("%d ", i);
+    }
+    return 0;
+}
+37. Sum of Fibonacci Numbers at Even Indexes up to N Terms
+
+#include <stdio.h>
+int main() {
+    int n, t1 = 0, t2 = 1, next, sum = 0;
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        if (i % 2 == 0) sum += t1;  // even index
+        next = t1 + t2;
+        t1 = t2;
+        t2 = next;
+    }
+    printf("Sum of Fibonacci numbers at even indexes up to %d terms = %d\n", n, sum);
+    return 0;
+}
+
+
+38. Simple Pyramid Pattern
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+39. Given Triangle (Right-angled)
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+40. 180° Rotation of Simple Pyramid
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+41. Inverted Pyramid
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+42. Number Pattern
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) printf("%d ", j);
+        printf("\n");
+    }
+    return 0;
+}
+43. Character Pattern
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (char c = 'A'; c < 'A'+i; c++) printf("%c ", c);
+        printf("\n");
+    }
+    return 0;
+}
+44. Continuous Character Pattern
+
+#include <stdio.h>
+int main() {
+    int n;
+    char ch = 'A';
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%c ", ch);
+            ch++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+45. Hollow Star Pyramid
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) {
+            if (k == 1 || k == 2*i-1 || i == n) printf("*");
+            else printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+46. Inverted Hollow Star Pyramid
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) {
+            if (k == 1 || k == 2*i-1 || i == n) printf("*");
+            else printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+47. Hollow Star Pyramid in a Diamond Shape
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    // upper half
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) {
+            if (k == 1 || k == 2*i-1) printf("*");
+            else printf(" ");
+        }
+        printf("\n");
+    }
+    // lower half
+    for (int i = n-1; i >= 1; i--) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) {
+            if (k == 1 || k == 2*i-1) printf("*");
+            else printf(" ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+48. Full Diamond Shape Pyramid
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    // upper half
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) printf("*");
+        printf("\n");
+    }
+    // lower half
+    for (int i = n-1; i >= 1; i--) {
+        for (int j = 1; j <= n-i; j++) printf(" ");
+        for (int k = 1; k <= 2*i-1; k++) printf("*");
+        printf("\n");
+    }
+    return 0;
+}
+49. Pascal's Triangle Pyramid
+
+#include <stdio.h>
+int main() {
+    int n, coef = 1;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 0; i < n; i++) {
+        for (int space = 1; space <= n-i; space++) printf(" ");
+        for (int j = 0; j <= i; j++) {
+            if (j==0 || i==0) coef = 1;
+            else coef = coef*(i-j+1)/j;
+            printf("%d ", coef);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+50. Floyd's Triangle Pyramid
+
+#include <stdio.h>
+int main() {
+    int n, num = 1;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    for (int i = 1; i <= n; i++) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", num);
+            num++;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+51. Reverse Floyd’s Triangle Pyramid
+
+#include <stdio.h>
+int main() {
+    int n, num = 1;
+    printf("Enter number of rows: ");
+    scanf("%d", &n);
+    // find total numbers
+    int total = n*(n+1)/2;
+    for (int i = n; i >= 1; i--) {
+        for (int j = 1; j <= i; j++) {
+            printf("%d ", total);
+            total--;
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+52. Check Prime Number by Creating a Function
+
+#include <stdio.h>
+
+int isPrime(int n) {
+    if (n <= 1) return 0;
+    for (int i = 2; i <= n/2; i++) {
+        if (n % i == 0) return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+    if (isPrime(num)) printf("%d is Prime\n", num);
+    else printf("%d is Not Prime\n", num);
+    return 0;
+}
+53. Display Prime Numbers Between Two Intervals Using Functions
+
+#include <stdio.h>
+
+int isPrime(int n) {
+    if (n <= 1) return 0;
+    for (int i = 2; i <= n/2; i++) {
+        if (n % i == 0) return 0;
+    }
+    return 1;
+}
+
+void printPrimes(int low, int high) {
+    for (int i = low; i <= high; i++) {
+        if (isPrime(i)) printf("%d ", i);
+    }
+}
+
+int main() {
+    int low, high;
+    printf("Enter two intervals: ");
+    scanf("%d %d", &low, &high);
+    printf("Prime numbers between %d and %d:\n", low, high);
+    printPrimes(low, high);
+    return 0;
+}
+54. Find All Roots of a Quadratic Equation
+
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double a, b, c, discriminant, root1, root2, realPart, imagPart;
+    printf("Enter coefficients a, b, c: ");
+    scanf("%lf %lf %lf", &a, &b, &c);
+
+    discriminant = b*b - 4*a*c;
+
+    if (discriminant > 0) {
+        root1 = (-b + sqrt(discriminant)) / (2*a);
+        root2 = (-b - sqrt(discriminant)) / (2*a);
+        printf("Roots are real and different: %.2lf , %.2lf\n", root1, root2);
+    }
+    else if (discriminant == 0) {
+        root1 = -b / (2*a);
+        printf("Roots are real and same: %.2lf\n", root1);
+    }
+    else {
+        realPart = -b / (2*a);
+        imagPart = sqrt(-discriminant) / (2*a);
+        printf("Roots are complex: %.2lf + %.2lfi , %.2lf - %.2lfi\n",
+               realPart, imagPart, realPart, imagPart);
+    }
+    return 0;
+}
+55. Check Whether a Number is Sum of Two Prime Numbers
+
+#include <stdio.h>
+
+int isPrime(int n) {
+    if (n <= 1) return 0;
+    for (int i = 2; i <= n/2; i++) {
+        if (n % i == 0) return 0;
+    }
+    return 1;
+}
+
+int main() {
+    int n, flag = 0;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    for (int i = 2; i <= n/2; i++) {
+        if (isPrime(i) && isPrime(n-i)) {
+            printf("%d = %d + %d\n", n, i, n-i);
+            flag = 1;
+        }
+    }
+    if (!flag) printf("%d cannot be expressed as sum of two primes\n", n);
+    return 0;
+}
+56. Sum of Natural Numbers Using Recursion
+
+#include <stdio.h>
+
+int sum(int n) {
+    if (n == 0) return 0;
+    return n + sum(n-1);
+}
+
+int main() {
+    int n;
+    printf("Enter N: ");
+    scanf("%d", &n);
+    printf("Sum = %d\n", sum(n));
+    return 0;
+}
+57. Factorial of a Number Using Recursion
+
+#include <stdio.h>
+
+int factorial(int n) {
+    if (n == 0) return 1;
+    return n * factorial(n-1);
+}
+
+int main() {
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+    printf("Factorial = %d\n", factorial(n));
+    return 0;
+}
+58. Find G.C.D Using Recursion
+
+#include <stdio.h>
+
+int gcd(int a, int b) {
+    if (b == 0) return a;
+    return gcd(b, a % b);
+}
+
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    printf("GCD = %d\n", gcd(a, b));
+    return 0;
+}
+59. Reverse a Stack Using Recursion
+(Here we simulate a stack using an array.)
+
+
+#include <stdio.h>
+
+void reverseStack(int stack[], int start, int end) {
+    if (start >= end) return;
+    int temp = stack[start];
+    stack[start] = stack[end];
+    stack[end] = temp;
+    reverseStack(stack, start+1, end-1);
+}
+
+int main() {
+    int n;
+    printf("Enter size of stack: ");
+    scanf("%d", &n);
+    int stack[n];
+    printf("Enter elements: ");
+    for (int i = 0; i < n; i++) scanf("%d", &stack[i]);
+
+    reverseStack(stack, 0, n-1);
+
+    printf("Reversed stack: ");
+    for (int i = 0; i < n; i++) printf("%d ", stack[i]);
+    return 0;
+}
+60. Calculate Power Using Recursion
+
+#include <stdio.h>
+
+int power(int base, int exp) {
+    if (exp == 0) return 1;
+    return base * power(base, exp-1);
+}
+
+int main() {
+    int base, exp;
+    printf("Enter base and exponent: ");
+    scanf("%d %d", &base, &exp);
+    printf("%d^%d = %d\n", base, exp, power(base, exp));
+    return 0;
+}
+
+61. Print a 2D Array
+
+#include <stdio.h>
+int main() {
+    int rows, cols;
+    printf("Enter rows and columns: ");
+    scanf("%d %d", &rows, &cols);
+    int arr[rows][cols];
+    printf("Enter elements:\n");
+    for (int i=0; i<rows; i++)
+        for (int j=0; j<cols; j++)
+            scanf("%d", &arr[i][j]);
+    printf("2D Array:\n");
+    for (int i=0; i<rows; i++) {
+        for (int j=0; j<cols; j++)
+            printf("%d ", arr[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+62. Find the Largest Element in an Array
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    int max = arr[0];
+    for (int i=1; i<n; i++)
+        if (arr[i] > max) max = arr[i];
+    printf("Largest element = %d\n", max);
+    return 0;
+}
+63. Find Maximum and Minimum in an Array
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    int max = arr[0], min = arr[0];
+    for (int i=1; i<n; i++) {
+        if (arr[i] > max) max = arr[i];
+        if (arr[i] < min) min = arr[i];
+    }
+    printf("Max = %d, Min = %d\n", max, min);
+    return 0;
+}
+64. Binary Search
+
+#include <stdio.h>
+int main() {
+    int n, key;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter sorted elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    printf("Enter element to search: ");
+    scanf("%d", &key);
+    int low=0, high=n-1, mid, found=0;
+    while (low <= high) {
+        mid = (low+high)/2;
+        if (arr[mid] == key) { found=1; break; }
+        else if (arr[mid] < key) low = mid+1;
+        else high = mid-1;
+    }
+    if (found) printf("Element found at index %d\n", mid);
+    else printf("Element not found\n");
+    return 0;
+}
+65. Average of Array Elements
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n], sum=0;
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) {
+        scanf("%d", &arr[i]);
+        sum += arr[i];
+    }
+    printf("Average = %.2f\n", (float)sum/n);
+    return 0;
+}
+66. Bubble Sort
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    for (int i=0; i<n-1; i++)
+        for (int j=0; j<n-i-1; j++)
+            if (arr[j] > arr[j+1]) {
+                int temp=arr[j]; arr[j]=arr[j+1]; arr[j+1]=temp;
+            }
+    printf("Sorted array: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    return 0;
+}
+67. Merge Sort
+
+#include <stdio.h>
+
+void merge(int arr[], int l, int m, int r) {
+    int n1 = m-l+1, n2 = r-m;
+    int L[n1], R[n2];
+    for (int i=0; i<n1; i++) L[i]=arr[l+i];
+    for (int j=0; j<n2; j++) R[j]=arr[m+1+j];
+    int i=0, j=0, k=l;
+    while (i<n1 && j<n2) {
+        if (L[i]<=R[j]) arr[k++]=L[i++];
+        else arr[k++]=R[j++];
+    }
+    while (i<n1) arr[k++]=L[i++];
+    while (j<n2) arr[k++]=R[j++];
+}
+
+void mergeSort(int arr[], int l, int r) {
+    if (l<r) {
+        int m=(l+r)/2;
+        mergeSort(arr,l,m);
+        mergeSort(arr,m+1,r);
+        merge(arr,l,m,r);
+    }
+}
+
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d",&n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0;i<n;i++) scanf("%d",&arr[i]);
+    mergeSort(arr,0,n-1);
+    printf("Sorted array: ");
+    for (int i=0;i<n;i++) printf("%d ",arr[i]);
+    return 0;
+}
+68. Selection Sort
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    for (int i=0; i<n-1; i++) {
+        int min=i;
+        for (int j=i+1; j<n; j++)
+            if (arr[j]<arr[min]) min=j;
+        int temp=arr[min]; arr[min]=arr[i]; arr[i]=temp;
+    }
+    printf("Sorted array: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    return 0;
+}
+69. Insertion Sort
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    for (int i=1; i<n; i++) {
+        int key=arr[i], j=i-1;
+        while (j>=0 && arr[j]>key) {
+            arr[j+1]=arr[j];
+            j--;
+        }
+        arr[j+1]=key;
+    }
+    printf("Sorted array: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    return 0;
+}
+70. Sort Array in Descending Order
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    for (int i=0; i<n-1; i++)
+        for (int j=i+1; j<n; j++)
+            if (arr[i]<arr[j]) {
+                int temp=arr[i]; arr[i]=arr[j]; arr[j]=temp;
+            }
+    printf("Descending order: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    return 0;
+}
+71. Sort Array in Ascending Order
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    for (int i=0; i<n-1; i++)
+        for (int j=i+1; j<n; j++)
+            if (arr[i]>arr[j]) {
+                int temp=arr[i]; arr[i]=arr[j]; arr[j]=temp;
+            }
+    printf("Ascending order: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    return 0;
+}
+
+
+72. Remove Duplicate Elements from a Sorted Array
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter sorted elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+
+    int j=0;
+    for (int i=0; i<n-1; i++) {
+        if (arr[i] != arr[i+1]) arr[j++] = arr[i];
+    }
+    arr[j++] = arr[n-1];
+
+    printf("Array after removing duplicates: ");
+    for (int i=0; i<j; i++) printf("%d ", arr[i]);
+    return 0;
+}
+73. Merge Two Arrays
+
+#include <stdio.h>
+int main() {
+    int n1, n2;
+    printf("Enter sizes of two arrays: ");
+    scanf("%d %d", &n1, &n2);
+    int a[n1], b[n2], c[n1+n2];
+    printf("Enter elements of first array: ");
+    for (int i=0; i<n1; i++) scanf("%d", &a[i]);
+    printf("Enter elements of second array: ");
+    for (int i=0; i<n2; i++) scanf("%d", &b[i]);
+    for (int i=0; i<n1; i++) c[i]=a[i];
+    for (int i=0; i<n2; i++) c[n1+i]=b[i];
+    printf("Merged array: ");
+    for (int i=0; i<n1+n2; i++) printf("%d ", c[i]);
+    return 0;
+}
+74. Remove All Occurrences of an Element in an Array
+
+#include <stdio.h>
+int main() {
+    int n, key;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    printf("Enter element to remove: ");
+    scanf("%d", &key);
+    int j=0;
+    for (int i=0; i<n; i++) {
+        if (arr[i] != key) arr[j++] = arr[i];
+    }
+    printf("Array after removal: ");
+    for (int i=0; i<j; i++) printf("%d ", arr[i]);
+    return 0;
+}
+75. Find Common Array Elements
+
+#include <stdio.h>
+int main() {
+    int n1, n2;
+    printf("Enter sizes of two arrays: ");
+    scanf("%d %d", &n1, &n2);
+    int a[n1], b[n2];
+    printf("Enter elements of first array: ");
+    for (int i=0; i<n1; i++) scanf("%d", &a[i]);
+    printf("Enter elements of second array: ");
+    for (int i=0; i<n2; i++) scanf("%d", &b[i]);
+    printf("Common elements: ");
+    for (int i=0; i<n1; i++) {
+        for (int j=0; j<n2; j++) {
+            if (a[i]==b[j]) {
+                printf("%d ", a[i]);
+                break;
+            }
+        }
+    }
+    return 0;
+}
+76. Copy All Elements of One Array to Another
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int a[n], b[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &a[i]);
+    for (int i=0; i<n; i++) b[i]=a[i];
+    printf("Copied array: ");
+    for (int i=0; i<n; i++) printf("%d ", b[i]);
+    return 0;
+}
+77. Array Rotation (Left Rotation by 1)
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", &arr[i]);
+    int temp=arr[0];
+    for (int i=0; i<n-1; i++) arr[i]=arr[i+1];
+    arr[n-1]=temp;
+    printf("Array after rotation: ");
+    for (int i=0; i<n; i++) printf("%d ", arr[i]);
+    return 0;
+}
+78. Sort 2D Array Across Rows
+
+#include <stdio.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int arr[r][c];
+    printf("Enter elements:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &arr[i][j]);
+    for (int i=0; i<r; i++) {
+        for (int x=0; x<c-1; x++) {
+            for (int y=0; y<c-x-1; y++) {
+                if (arr[i][y] > arr[i][y+1]) {
+                    int temp=arr[i][y];
+                    arr[i][y]=arr[i][y+1];
+                    arr[i][y+1]=temp;
+                }
+            }
+        }
+    }
+    printf("Sorted rows:\n");
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) printf("%d ", arr[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+79. Check Whether Two Matrices Are Equal
+
+#include <stdio.h>
+int main() {
+    int r, c, flag=1;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int a[r][c], b[r][c];
+    printf("Enter first matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+    printf("Enter second matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &b[i][j]);
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            if (a[i][j]!=b[i][j]) flag=0;
+    if (flag) printf("Matrices are equal\n");
+    else printf("Matrices are not equal\n");
+    return 0;
+}
+80. Transpose of a Matrix
+
+#include <stdio.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int a[r][c];
+    printf("Enter matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+    printf("Transpose:\n");
+    for (int i=0; i<c; i++) {
+        for (int j=0; j<r; j++) printf("%d ", a[j][i]);
+        printf("\n");
+    }
+    return 0;
+}
+81. Determinant of a 2x2 Matrix
+
+#include <stdio.h>
+int main() {
+    int a[2][2];
+    printf("Enter 2x2 matrix:\n");
+    for (int i=0; i<2; i++)
+        for (int j=0; j<2; j++)
+            scanf("%d", &a[i][j]);
+    int det = a[0][0]*a[1][1] - a[0][1]*a[1][0];
+    printf("Determinant = %d\n", det);
+    return 0;
+}
+
+
+82. Find the Normal and Trace of a Matrix
+
+#include <stdio.h>
+#include <math.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int a[r][c];
+    printf("Enter matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+
+    int trace = 0;
+    double normal = 0;
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) {
+            if (i == j) trace += a[i][j];
+            normal += a[i][j] * a[i][j];
+        }
+    }
+    normal = sqrt(normal);
+
+    printf("Trace = %d\n", trace);
+    printf("Normal = %.2lf\n", normal);
+    return 0;
+}
+83. Add Two Matrices
+
+#include <stdio.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int a[r][c], b[r][c], sum[r][c];
+    printf("Enter first matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+    printf("Enter second matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &b[i][j]);
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            sum[i][j] = a[i][j] + b[i][j];
+    printf("Sum matrix:\n");
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) printf("%d ", sum[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+84. Multiply Two Matrices
+
+#include <stdio.h>
+int main() {
+    int r1, c1, r2, c2;
+    printf("Enter rows and cols of first matrix: ");
+    scanf("%d %d", &r1, &c1);
+    printf("Enter rows and cols of second matrix: ");
+    scanf("%d %d", &r2, &c2);
+
+    if (c1 != r2) {
+        printf("Matrix multiplication not possible!\n");
+        return 0;
+    }
+
+    int a[r1][c1], b[r2][c2], prod[r1][c2];
+    printf("Enter first matrix:\n");
+    for (int i=0; i<r1; i++)
+        for (int j=0; j<c1; j++)
+            scanf("%d", &a[i][j]);
+    printf("Enter second matrix:\n");
+    for (int i=0; i<r2; i++)
+        for (int j=0; j<c2; j++)
+            scanf("%d", &b[i][j]);
+
+    for (int i=0; i<r1; i++)
+        for (int j=0; j<c2; j++) {
+            prod[i][j] = 0;
+            for (int k=0; k<c1; k++)
+                prod[i][j] += a[i][k] * b[k][j];
+        }
+
+    printf("Product matrix:\n");
+    for (int i=0; i<r1; i++) {
+        for (int j=0; j<c2; j++) printf("%d ", prod[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+85. Print Boundary Elements of a Matrix
+
+#include <stdio.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int a[r][c];
+    printf("Enter matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+
+    printf("Boundary elements:\n");
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) {
+            if (i==0 || i==r-1 || j==0 || j==c-1)
+                printf("%d ", a[i][j]);
+            else
+                printf("  ");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+86. Rotate Matrix Elements (Clockwise Rotation of Outer Ring)
+
+#include <stdio.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int a[r][c];
+    printf("Enter matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+
+    int temp = a[0][0];
+    // top row
+    for (int j=0; j<c-1; j++) a[0][j] = a[0][j+1];
+    // right column
+    for (int i=0; i<r-1; i++) a[i][c-1] = a[i+1][c-1];
+    // bottom row
+    for (int j=c-1; j>0; j--) a[r-1][j] = a[r-1][j-1];
+    // left column
+    for (int i=r-1; i>0; i--) a[i][0] = a[i-1][0];
+    a[1][0] = temp;
+
+    printf("Matrix after rotation:\n");
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) printf("%d ", a[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+87. Compute the Sum of Diagonals of a Matrix
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size of square matrix: ");
+    scanf("%d", &n);
+    int a[n][n];
+    printf("Enter matrix:\n");
+    for (int i=0; i<n; i++)
+        for (int j=0; j<n; j++)
+            scanf("%d", &a[i][j]);
+
+    int sum1=0, sum2=0;
+    for (int i=0; i<n; i++) {
+        sum1 += a[i][i];           // main diagonal
+        sum2 += a[i][n-i-1];       // secondary diagonal
+    }
+    printf("Sum of main diagonal = %d\n", sum1);
+    printf("Sum of secondary diagonal = %d\n", sum2);
+    return 0;
+}
+88. Interchange Elements of First and Last in a Matrix across Rows
+
+#include <stdio.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+    int a[r][c];
+    printf("Enter matrix:\n");
+    for (int i=0; i<r; i++)
+        for (int j=0; j<c; j++)
+            scanf("%d", &a[i][j]);
+
+    for (int i=0; i<r; i++) {
+        int temp = a[i][0];
+        a[i][0] = a[i][c-1];
+        a[i][c-1] = temp;
+    }
+
+    printf("Matrix after swapping first and last elements of each row:\n");
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) printf("%d ", a[i][j]);
+        printf("\n");
+    }
+    return 0;
+}
+
+89. C Program to Interchange Elements of First & Last in Matrix across Columns
+
+#include <stdio.h>
+int main() {
+    int r, c;
+    printf("Enter rows and cols: ");
+    scanf("%d %d", &r, &c);
+
+    int a[r][c];
+    printf("Enter matrix:\n");
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) {
+            scanf("%d", &a[i][j]);
+        }
+    }
+
+    // Swap elements of first and last row across all columns
+    for (int j=0; j<c; j++) {
+        int temp = a[0][j];
+        a[0][j] = a[r-1][j];
+        a[r-1][j] = temp;
+    }
+
+    printf("Matrix after swapping first and last rows across columns:\n");
+    for (int i=0; i<r; i++) {
+        for (int j=0; j<c; j++) {
+            printf("%d ", a[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
+
+
+90. Concatenate Two Strings
+c
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char s1[100], s2[100];
+    printf("Enter first string: ");
+    gets(s1);
+    printf("Enter second string: ");
+    gets(s2);
+    strcat(s1, s2);
+    printf("Concatenated string: %s\n", s1);
+    return 0;
+}
+91. Add 2 Binary Strings
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char b1[100], b2[100], result[101];
+    printf("Enter first binary string: ");
+    scanf("%s", b1);
+    printf("Enter second binary string: ");
+    scanf("%s", b2);
+
+    int i = strlen(b1)-1, j = strlen(b2)-1, k = 0, carry = 0;
+    result[100] = '\0';
+    char temp[101]; int idx=0;
+
+    while (i>=0 || j>=0 || carry) {
+        int sum = carry;
+        if (i>=0) sum += b1[i--]-'0';
+        if (j>=0) sum += b2[j--]-'0';
+        temp[idx++] = (sum%2)+'0';
+        carry = sum/2;
+    }
+    for (int m=0; m<idx; m++) result[m]=temp[idx-m-1];
+    result[idx]='\0';
+    printf("Sum = %s\n", result);
+    return 0;
+}
+92. Get First Non-Repeating Character
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    int freq[256]={0};
+    printf("Enter string: ");
+    gets(str);
+    for (int i=0; str[i]; i++) freq[(unsigned char)str[i]]++;
+    for (int i=0; str[i]; i++) {
+        if (freq[(unsigned char)str[i]]==1) {
+            printf("First non-repeating character: %c\n", str[i]);
+            return 0;
+        }
+    }
+    printf("No non-repeating character found\n");
+    return 0;
+}
+93. Check Palindrome String
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+    int l=0, r=strlen(str)-1, flag=1;
+    while (l<r) {
+        if (str[l]!=str[r]) { flag=0; break; }
+        l++; r--;
+    }
+    if (flag) printf("Palindrome\n");
+    else printf("Not Palindrome\n");
+    return 0;
+}
+94. Reverse Array or String
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+    int l=0, r=strlen(str)-1;
+    while (l<r) {
+        char temp=str[l]; str[l]=str[r]; str[r]=temp;
+        l++; r--;
+    }
+    printf("Reversed string: %s\n", str);
+    return 0;
+}
+95. Reverse String Using Recursion
+
+#include <stdio.h>
+#include <string.h>
+void reverse(char str[], int l, int r) {
+    if (l>=r) return;
+    char temp=str[l]; str[l]=str[r]; str[r]=temp;
+    reverse(str, l+1, r-1);
+}
+int main() {
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+    reverse(str, 0, strlen(str)-1);
+    printf("Reversed string: %s\n", str);
+    return 0;
+}
+96. Find Length of String
+
+#include <stdio.h>
+int main() {
+    char str[100];
+    int len=0;
+    printf("Enter string: ");
+    gets(str);
+    while (str[len]!='\0') len++;
+    printf("Length = %d\n", len);
+    return 0;
+}
+97. Sort a String
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    printf("Enter string: ");
+    gets(str);
+    int n=strlen(str);
+    for (int i=0; i<n-1; i++)
+        for (int j=i+1; j<n; j++)
+            if (str[i]>str[j]) {
+                char temp=str[i]; str[i]=str[j]; str[j]=temp;
+            }
+    printf("Sorted string: %s\n", str);
+    return 0;
+}
+98. Check Pangram String
+
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+int main() {
+    char str[200];
+    int present[26]={0};
+    printf("Enter string: ");
+    gets(str);
+    for (int i=0; str[i]; i++) {
+        if (isalpha(str[i])) present[tolower(str[i])-'a']=1;
+    }
+    int flag=1;
+    for (int i=0; i<26; i++) if (!present[i]) flag=0;
+    if (flag) printf("Pangram\n");
+    else printf("Not Pangram\n");
+    return 0;
+}
+99. Print First Letter of Each Word
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[200];
+    printf("Enter string: ");
+    gets(str);
+    if (str[0]!=' ') printf("%c ", str[0]);
+    for (int i=1; str[i]; i++) {
+        if (str[i-1]==' ' && str[i]!=' ') printf("%c ", str[i]);
+    }
+    return 0;
+}
+100. Unicode Code Point at Index
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[200];
+    int index;
+    printf("Enter string: ");
+    gets(str);
+    printf("Enter index: ");
+    scanf("%d", &index);
+    if (index>=0 && index<strlen(str))
+        printf("Unicode code point = %d\n", (unsigned char)str[index]);
+    else
+        printf("Invalid index\n");
+    return 0;
+}
+101. Remove Leading Zeros
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[200];
+    printf("Enter string: ");
+    gets(str);
+    int i=0;
+    while (str[i]=='0') i++;
+    printf("String without leading zeros: %s\n", str+i);
+    return 0;
+}
+102. Compare Two Strings
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char s1[100], s2[100];
+    printf("Enter first string: ");
+    gets(s1);
+    printf("Enter second string: ");
+    gets(s2);
+    if (strcmp(s1,s2)==0) printf("Strings are equal\n");
+    else printf("Strings are not equal\n");
+    return 0;
+}
+103. Compare Two Strings Lexicographically
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char s1[100], s2[100];
+    printf("Enter first string: ");
+    gets(s1);
+    printf("Enter second string: ");
+    gets(s2);
+    int cmp=strcmp(s1,s2);
+    if (cmp==0) printf("Strings are equal\n");
+    else if (cmp<0) printf("%s comes before %s\n", s1, s2);
+    else printf("%s comes before %s\n", s2, s1);
+    return 0;
+}
+104. Insert a String into Another String
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char s1[200], s2[100];
+    int pos;
+    printf("Enter main string: ");
+    gets(s1);
+    printf("Enter string to insert: ");
+    gets(s2);
+    printf("Enter position: ");
+    scanf("%d", &pos);
+
+    char result[300];
+    strncpy(result, s1, pos);
+    result[pos]='\0';
+    strcat(result, s2);
+    strcat(result, s1+pos);
+
+    printf("Result: %s\n", result);
+    return 0;
+}
+105. Split a String into Sub-Strings (by spaces)
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[200];
+    printf("Enter string: ");
+    gets(str);
+    char *token = strtok(str, " ");
+    while (token != NULL) {
+        printf("%s\n", token);
+        token = strtok(NULL, " ");
+    }
+    return 0;
+}
+
+
+106. Boolean to String Conversion
+
+#include <stdio.h>
+#include <stdbool.h>
+int main() {
+    bool val;
+    printf("Enter 0 (false) or 1 (true): ");
+    scanf("%d", &val);
+    if (val) printf("String = true\n");
+    else printf("String = false\n");
+    return 0;
+}
+107. Float to String Conversion
+
+#include <stdio.h>
+int main() {
+    float num;
+    char str[50];
+    printf("Enter float: ");
+    scanf("%f", &num);
+    sprintf(str, "%f", num);
+    printf("String = %s\n", str);
+    return 0;
+}
+108. Double to String Conversion
+
+#include <stdio.h>
+int main() {
+    double num;
+    char str[50];
+    printf("Enter double: ");
+    scanf("%lf", &num);
+    sprintf(str, "%lf", num);
+    printf("String = %s\n", str);
+    return 0;
+}
+109. String to Long Conversion
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    char str[50];
+    printf("Enter string number: ");
+    scanf("%s", str);
+    long val = strtol(str, NULL, 10);
+    printf("Long = %ld\n", val);
+    return 0;
+}
+110. Long to String Conversion
+
+#include <stdio.h>
+int main() {
+    long num;
+    char str[50];
+    printf("Enter long: ");
+    scanf("%ld", &num);
+    sprintf(str, "%ld", num);
+    printf("String = %s\n", str);
+    return 0;
+}
+111. Int to Char Conversion
+
+#include <stdio.h>
+int main() {
+    int num;
+    printf("Enter integer (ASCII code): ");
+    scanf("%d", &num);
+    char c = (char)num;
+    printf("Character = %c\n", c);
+    return 0;
+}
+112. Char to Int Conversion
+
+#include <stdio.h>
+int main() {
+    char c;
+    printf("Enter character: ");
+    scanf(" %c", &c);
+    int num = (int)c;
+    printf("Integer (ASCII) = %d\n", num);
+    return 0;
+}
+113. Octal to Decimal Conversion
+
+#include <stdio.h>
+int main() {
+    int octal;
+    printf("Enter octal number: ");
+    scanf("%o", &octal);
+    printf("Decimal = %d\n", octal);
+    return 0;
+}
+114. Decimal to Octal Conversion
+
+#include <stdio.h>
+int main() {
+    int dec;
+    printf("Enter decimal number: ");
+    scanf("%d", &dec);
+    printf("Octal = %o\n", dec);
+    return 0;
+}
+115. Hexadecimal to Decimal Conversion
+
+#include <stdio.h>
+int main() {
+    int hex;
+    printf("Enter hexadecimal number: ");
+    scanf("%x", &hex);
+    printf("Decimal = %d\n", hex);
+    return 0;
+}
+116. Decimal to Hexadecimal Conversion
+
+#include <stdio.h>
+int main() {
+    int dec;
+    printf("Enter decimal number: ");
+    scanf("%d", &dec);
+    printf("Hexadecimal = %X\n", dec);
+    return 0;
+}
+117. Decimal to Binary Conversion
+
+#include <stdio.h>
+int main() {
+    int dec, bin[32], i=0;
+    printf("Enter decimal number: ");
+    scanf("%d", &dec);
+    while (dec > 0) {
+        bin[i++] = dec % 2;
+        dec /= 2;
+    }
+    printf("Binary = ");
+    for (int j=i-1; j>=0; j--) printf("%d", bin[j]);
+    printf("\n");
+    return 0;
+}
+118. Binary to Decimal Conversion
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char bin[32];
+    printf("Enter binary string: ");
+    scanf("%s", bin);
+    int dec=0;
+    for (int i=0; i<strlen(bin); i++) {
+        dec = dec*2 + (bin[i]-'0');
+    }
+    printf("Decimal = %d\n", dec);
+    return 0;
+}
+
+119. How to Return a Pointer from a Function in C
+
+#include <stdio.h>
+
+int* getMax(int *a, int *b) {
+    if (*a > *b) return a;
+    else return b;
+}
+
+int main() {
+    int x=10, y=20;
+    int *p = getMax(&x, &y);
+    printf("Max = %d\n", *p);
+    return 0;
+}
+👉 Here, the function getMax returns a pointer to the larger integer.
+
+120. Declare a Two-Dimensional Array of Pointers in C
+
+#include <stdio.h>
+int main() {
+    int a=1, b=2, c=3, d=4;
+    int *arr[2][2] = { {&a, &b}, {&c, &d} };
+
+    printf("%d %d\n", *arr[0][0], *arr[0][1]);
+    printf("%d %d\n", *arr[1][0], *arr[1][1]);
+    return 0;
+}
+👉 arr is a 2D array where each element is a pointer to an integer.
+
+121. Find the Largest Element in an Array using Pointers
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", arr+i);
+
+    int *max = arr;
+    for (int i=1; i<n; i++) {
+        if (*(arr+i) > *max) max = arr+i;
+    }
+    printf("Largest element = %d\n", *max);
+    return 0;
+}
+122. Swap Two Numbers (using pointers)
+
+#include <stdio.h>
+void swap(int *x, int *y) {
+    int temp = *x;
+    *x = *y;
+    *y = temp;
+}
+int main() {
+    int a, b;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &a, &b);
+    swap(&a, &b);
+    printf("After swap: a=%d, b=%d\n", a, b);
+    return 0;
+}
+123. Sort an Array using Pointers
+
+#include <stdio.h>
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    int arr[n];
+    printf("Enter elements: ");
+    for (int i=0; i<n; i++) scanf("%d", arr+i);
+
+    for (int i=0; i<n-1; i++) {
+        for (int j=i+1; j<n; j++) {
+            if (*(arr+i) > *(arr+j)) {
+                int temp = *(arr+i);
+                *(arr+i) = *(arr+j);
+                *(arr+j) = temp;
+            }
+        }
+    }
+    printf("Sorted array: ");
+    for (int i=0; i<n; i++) printf("%d ", *(arr+i));
+    return 0;
+}
+124. Sort a 2D Array of Strings
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    int n;
+    printf("Enter number of strings: ");
+    scanf("%d", &n);
+    char str[n][100];
+    printf("Enter strings:\n");
+    for (int i=0; i<n; i++) scanf("%s", str[i]);
+
+    for (int i=0; i<n-1; i++) {
+        for (int j=i+1; j<n; j++) {
+            if (strcmp(str[i], str[j]) > 0) {
+                char temp[100];
+                strcpy(temp, str[i]);
+                strcpy(str[i], str[j]);
+                strcpy(str[j], temp);
+            }
+        }
+    }
+    printf("Sorted strings:\n");
+    for (int i=0; i<n; i++) printf("%s\n", str[i]);
+    return 0;
+}
+125. Check if a String is Palindrome using Pointers
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char str[100];
+    printf("Enter string: ");
+    scanf("%s", str);
+    char *l = str;
+    char *r = str + strlen(str) - 1;
+    int flag=1;
+    while (l < r) {
+        if (*l != *r) { flag=0; break; }
+        l++; r--;
+    }
+    if (flag) printf("Palindrome\n");
+    else printf("Not Palindrome\n");
+    return 0;
+}
+126. Create a Copy of a Singly Linked List using Recursion
+
+#include <stdio.h>
+#include <stdlib.h>
+
+struct Node {
+    int data;
+    struct Node* next;
+};
+
+struct Node* createNode(int data) {
+    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+    newNode->data = data;
+    newNode->next = NULL;
+    return newNode;
+}
+
+// Recursive copy function
+struct Node* copyList(struct Node* head) {
+    if (head == NULL) return NULL;
+    struct Node* newNode = createNode(head->data);
+    newNode->next = copyList(head->next);
+    return newNode;
+}
+
+void printList(struct Node* head) {
+    while (head != NULL) {
+        printf("%d -> ", head->data);
+        head = head->next;
+    }
+    printf("NULL\n");
+}
+
+int main() {
+    struct Node* head = createNode(1);
+    head->next = createNode(2);
+    head->next->next = createNode(3);
+
+    printf("Original list: ");
+    printList(head);
+
+    struct Node* copied = copyList(head);
+    printf("Copied list: ");
+    printList(copied);
+
+    return 0;
+}
+
+
+127. Store Information of Students Using Structure
+
+#include <stdio.h>
+struct Student {
+    char name[50];
+    int roll;
+    float marks;
+};
+int main() {
+    struct Student s;
+    printf("Enter name: ");
+    scanf("%s", s.name);
+    printf("Enter roll: ");
+    scanf("%d", &s.roll);
+    printf("Enter marks: ");
+    scanf("%f", &s.marks);
+
+    printf("\nStudent Info:\nName: %s\nRoll: %d\nMarks: %.2f\n", s.name, s.roll, s.marks);
+    return 0;
+}
+128. Store Student Records as Structures and Sort by Name
+
+#include <stdio.h>
+#include <string.h>
+struct Student {
+    char name[50];
+    int roll;
+    float marks;
+};
+int main() {
+    int n;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    struct Student s[n];
+    for (int i=0; i<n; i++) {
+        printf("Enter name, roll, marks: ");
+        scanf("%s %d %f", s[i].name, &s[i].roll, &s[i].marks);
+    }
+    for (int i=0; i<n-1; i++) {
+        for (int j=i+1; j<n; j++) {
+            if (strcmp(s[i].name, s[j].name) > 0) {
+                struct Student temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+    printf("\nSorted by name:\n");
+    for (int i=0; i<n; i++)
+        printf("%s %d %.2f\n", s[i].name, s[i].roll, s[i].marks);
+    return 0;
+}
+129. Add N Distances in Inch-Feet System
+
+#include <stdio.h>
+struct Distance {
+    int feet;
+    int inch;
+};
+int main() {
+    int n;
+    printf("Enter number of distances: ");
+    scanf("%d", &n);
+    struct Distance d[n], sum={0,0};
+    for (int i=0; i<n; i++) {
+        printf("Enter feet and inches: ");
+        scanf("%d %d", &d[i].feet, &d[i].inch);
+        sum.feet += d[i].feet;
+        sum.inch += d[i].inch;
+    }
+    sum.feet += sum.inch/12;
+    sum.inch %= 12;
+    printf("Total distance = %d feet %d inches\n", sum.feet, sum.inch);
+    return 0;
+}
+130. Add Two Complex Numbers by Passing Structure to Function
+
+#include <stdio.h>
+struct Complex {
+    float real;
+    float imag;
+};
+struct Complex add(struct Complex a, struct Complex b) {
+    struct Complex result;
+    result.real = a.real + b.real;
+    result.imag = a.imag + b.imag;
+    return result;
+}
+int main() {
+    struct Complex c1, c2, sum;
+    printf("Enter first complex number (real imag): ");
+    scanf("%f %f", &c1.real, &c1.imag);
+    printf("Enter second complex number (real imag): ");
+    scanf("%f %f", &c2.real, &c2.imag);
+    sum = add(c1, c2);
+    printf("Sum = %.2f + %.2fi\n", sum.real, sum.imag);
+    return 0;
+}
+131. Store Student Records and Sort by Age or ID
+
+#include <stdio.h>
+struct Student {
+    char name[50];
+    int id;
+    int age;
+};
+int main() {
+    int n;
+    printf("Enter number of students: ");
+    scanf("%d", &n);
+    struct Student s[n];
+    for (int i=0; i<n; i++) {
+        printf("Enter name, id, age: ");
+        scanf("%s %d %d", s[i].name, &s[i].id, &s[i].age);
+    }
+    // Sort by age
+    for (int i=0; i<n-1; i++) {
+        for (int j=i+1; j<n; j++) {
+            if (s[i].age > s[j].age) {
+                struct Student temp = s[i];
+                s[i] = s[j];
+                s[j] = temp;
+            }
+        }
+    }
+    printf("\nSorted by age:\n");
+    for (int i=0; i<n; i++)
+        printf("%s %d %d\n", s[i].name, s[i].id, s[i].age);
+    return 0;
+}
+132. Read/Write Structure to a File
+
+#include <stdio.h>
+struct Student {
+    char name[50];
+    int roll;
+    float marks;
+};
+int main() {
+    struct Student s1 = {"Alice", 1, 95.5}, s2;
+    FILE *f = fopen("student.dat", "wb");
+    fwrite(&s1, sizeof(s1), 1, f);
+    fclose(f);
+
+    f = fopen("student.dat", "rb");
+    fread(&s2, sizeof(s2), 1, f);
+    fclose(f);
+
+    printf("Read from file: %s %d %.2f\n", s2.name, s2.roll, s2.marks);
+    return 0;
+}
+133. Flexible Array Members in a Structure
+
+#include <stdio.h>
+#include <stdlib.h>
+struct Flex {
+    int size;
+    int arr[];  // flexible array member
+};
+int main() {
+    int n;
+    printf("Enter size: ");
+    scanf("%d", &n);
+    struct Flex *f = malloc(sizeof(struct Flex) + n*sizeof(int));
+    f->size = n;
+    printf("Enter %d elements: ", n);
+    for (int i=0; i<n; i++) scanf("%d", &f->arr[i]);
+    printf("Stored elements: ");
+    for (int i=0; i<n; i++) printf("%d ", f->arr[i]);
+    free(f);
+    return 0;
+}
+
+134. Create a Temporary File
+
+#include <stdio.h>
+int main() {
+    char tmpname[L_tmpnam];
+    tmpnam(tmpname);
+    FILE *fp = fopen(tmpname, "w+");
+    if (fp == NULL) {
+        printf("Unable to create temporary file.\n");
+        return 1;
+    }
+    printf("Temporary file created: %s\n", tmpname);
+    fprintf(fp, "Hello Temporary File!\n");
+    fclose(fp);
+    return 0;
+}
+135. Read/Write Structure to a File
+
+#include <stdio.h>
+struct Student {
+    char name[50];
+    int roll;
+    float marks;
+};
+int main() {
+    struct Student s1 = {"Alice", 1, 95.5}, s2;
+    FILE *f = fopen("student.dat", "wb");
+    fwrite(&s1, sizeof(s1), 1, f);
+    fclose(f);
+
+    f = fopen("student.dat", "rb");
+    fread(&s2, sizeof(s2), 1, f);
+    fclose(f);
+
+    printf("Read from file: %s %d %.2f\n", s2.name, s2.roll, s2.marks);
+    return 0;
+}
+136. Rename a File
+
+#include <stdio.h>
+int main() {
+    if (rename("oldfile.txt", "newfile.txt") == 0)
+        printf("File renamed successfully.\n");
+    else
+        printf("Error renaming file.\n");
+    return 0;
+}
+137. Make a File Read-Only
+
+#include <stdio.h>
+#include <stdlib.h>
+int main() {
+    if (system("chmod 444 myfile.txt") == 0)
+        printf("File is now read-only.\n");
+    else
+        printf("Error changing file permissions.\n");
+    return 0;
+}
+
+
+138. Compare Two Files and Report Mismatches
+
+#include <stdio.h>
+int main() {
+    FILE *f1 = fopen("file1.txt", "r");
+    FILE *f2 = fopen("file2.txt", "r");
+    if (!f1 || !f2) {
+        printf("Error opening files.\n");
+        return 1;
+    }
+    int ch1, ch2, pos=0, flag=0;
+    while ((ch1=fgetc(f1))!=EOF && (ch2=fgetc(f2))!=EOF) {
+        pos++;
+        if (ch1!=ch2) {
+            printf("Mismatch at position %d: %c vs %c\n", pos, ch1, ch2);
+            flag=1;
+        }
+    }
+    if (!flag) printf("Files are identical.\n");
+    fclose(f1); fclose(f2);
+    return 0;
+}
+139. Copy One File into Another File
+
+#include <stdio.h>
+int main() {
+    FILE *src = fopen("source.txt", "r");
+    FILE *dest = fopen("copy.txt", "w");
+    if (!src || !dest) {
+        printf("Error opening files.\n");
+        return 1;
+    }
+    char ch;
+    while ((ch=fgetc(src))!=EOF) fputc(ch, dest);
+    printf("File copied successfully.\n");
+    fclose(src); fclose(dest);
+    return 0;
+}
+140. Print All Patterns that Match Given Pattern from a File
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    FILE *fp = fopen("data.txt", "r");
+    char pattern[50], line[200];
+    printf("Enter pattern: ");
+    scanf("%s", pattern);
+    while (fgets(line, sizeof(line), fp)) {
+        if (strstr(line, pattern))
+            printf("%s", line);
+    }
+    fclose(fp);
+    return 0;
+}
+141. Append Content of One Text File to Another
+
+#include <stdio.h>
+int main() {
+    FILE *src = fopen("file1.txt", "r");
+    FILE *dest = fopen("file2.txt", "a");
+    if (!src || !dest) {
+        printf("Error opening files.\n");
+        return 1;
+    }
+    char ch;
+    while ((ch=fgetc(src))!=EOF) fputc(ch, dest);
+    printf("Content appended successfully.\n");
+    fclose(src); fclose(dest);
+    return 0;
+}
+142. Read Content from One File and Write Into Another
+
+#include <stdio.h>
+int main() {
+    FILE *src = fopen("input.txt", "r");
+    FILE *dest = fopen("output.txt", "w");
+    if (!src || !dest) {
+        printf("Error opening files.\n");
+        return 1;
+    }
+    char ch;
+    while ((ch=fgetc(src))!=EOF) fputc(ch, dest);
+    printf("Content copied successfully.\n");
+    fclose(src); fclose(dest);
+    return 0;
+}
+143. Read and Print All Files from a Zip File
+
+#include <stdio.h>
+#include <zip.h>
+int main() {
+    int err;
+    zip_t *zip = zip_open("archive.zip", 0, &err);
+    if (!zip) {
+        printf("Error opening zip file.\n");
+        return 1;
+    }
+    int num_files = zip_get_num_entries(zip, 0);
+    printf("Files in zip:\n");
+    for (int i=0; i<num_files; i++) {
+        printf("%s\n", zip_get_name(zip, i, 0));
+    }
+    zip_close(zip);
+    return 0;
+}
+
+
+144. Format Time in AM-PM Format
+
+#include <stdio.h>
+#include <time.h>
+int main() {
+    time_t t;
+    struct tm *tm_info;
+    char buffer[20];
+
+    time(&t);
+    tm_info = localtime(&t);
+
+    strftime(buffer, sizeof(buffer), "%I:%M:%S %p", tm_info);
+    printf("Current time in AM-PM format: %s\n", buffer);
+    return 0;
+}
+145. Print Digital Clock with Current Time
+
+#include <stdio.h>
+#include <time.h>
+#include <unistd.h>
+int main() {
+    while (1) {
+        time_t t = time(NULL);
+        struct tm *tm_info = localtime(&t);
+        printf("\rDigital Clock: %02d:%02d:%02d",
+               tm_info->tm_hour, tm_info->tm_min, tm_info->tm_sec);
+        fflush(stdout);
+        sleep(1); // wait 1 second
+    }
+    return 0;
+}
+146. Display Dates of Calendar Year in Different Formats
+
+#include <stdio.h>
+#include <time.h>
+int main() {
+    time_t t = time(NULL);
+    struct tm *tm_info = localtime(&t);
+
+    char buffer[50];
+    strftime(buffer, sizeof(buffer), "%d-%m-%Y", tm_info);
+    printf("Format 1 (DD-MM-YYYY): %s\n", buffer);
+
+    strftime(buffer, sizeof(buffer), "%m/%d/%Y", tm_info);
+    printf("Format 2 (MM/DD/YYYY): %s\n", buffer);
+
+    strftime(buffer, sizeof(buffer), "%B %d, %Y", tm_info);
+    printf("Format 3 (Month DD, YYYY): %s\n", buffer);
+
+    return 0;
+}
+147. Display Current Date and Time
+
+#include <stdio.h>
+#include <time.h>
+int main() {
+    time_t t = time(NULL);
+    struct tm *tm_info = localtime(&t);
+
+    printf("Current Date: %02d-%02d-%d\n", tm_info->tm_mday, tm_info->tm_mon+1, tm_info->tm_year+1900);
+    printf("Current Time: %02d:%02d:%02d\n", tm_info->tm_hour, tm_info->tm_min, tm_info->tm_sec);
+    return 0;
+}
+148. Convert Local Time to GMT
+
+#include <stdio.h>
+#include <time.h>
+int main() {
+    time_t t = time(NULL);
+    struct tm *local = localtime(&t);
+    struct tm *gmt = gmtime(&t);
+
+    printf("Local time: %02d:%02d:%02d\n", local->tm_hour, local->tm_min, local->tm_sec);
+    printf("GMT time:   %02d:%02d:%02d\n", gmt->tm_hour, gmt->tm_min, gmt->tm_sec);
+    return 0;
+}
+149. Convert Hours into Minutes and Seconds
+
+#include <stdio.h>
+int main() {
+    int hours;
+    printf("Enter hours: ");
+    scanf("%d", &hours);
+
+    int minutes = hours * 60;
+    int seconds = hours * 3600;
+
+    printf("%d hours = %d minutes = %d seconds\n", hours, minutes, seconds);
+    return 0;
+}
+
+150. Show Runtime Exceptions
+
+#include <stdio.h>
+int main() {
+    int a = 10, b = 0;
+    // Runtime error: division by zero
+    printf("Result = %d\n", a / b);  
+    return 0;
+}
+
+151. Show Types of Errors
+
+#include <stdio.h>
+int main() {
+    // Compile-time error: undeclared variable
+    // printf("%d", x);  
+
+    int a = 10, b = 0;
+    // Runtime error: division by zero
+    printf("%d\n", a/b);
+
+    return 0;
+}
+152. Show Unreachable Code Error
+
+#include <stdio.h>
+int main() {
+    return 0;
+    printf("This is unreachable code!\n"); // Compiler warning/error
+}
+
+153. Find Quotient and Remainder
+
+#include <stdio.h>
+int main() {
+    int dividend, divisor;
+    printf("Enter dividend and divisor: ");
+    scanf("%d %d", &dividend, &divisor);
+    int quotient = dividend / divisor;
+    int remainder = dividend % divisor;
+    printf("Quotient = %d, Remainder = %d\n", quotient, remainder);
+    return 0;
+}
+154. Find the Initials of a Name
+
+#include <stdio.h>
+#include <string.h>
+int main() {
+    char name[100];
+    printf("Enter full name: ");
+    gets(name);
+    if (name[0] != ' ') printf("%c", name[0]);
+    for (int i=1; name[i]; i++) {
+        if (name[i-1] == ' ' && name[i] != ' ')
+            printf("%c", name[i]);
+    }
+    printf("\n");
+    return 0;
+}
+155. Draw a Circle in Graphics
+
+#include <graphics.h>
+#include <conio.h>
+int main() {
+    int gd = DETECT, gm;
+    initgraph(&gd, &gm, "");
+    circle(200, 200, 100); // center (200,200), radius 100
+    getch();
+    closegraph();
+    return 0;
+}
+
+
+156. Printing Source Code of a C Program Itself
+
+
+#include <stdio.h>
+int main() {
+    char *program = "#include <stdio.h>\nint main(){char *program=%c%s%c;printf(program,34,program,34);return 0;}";
+    printf(program,34,program,34);
+    return 0;
+}
